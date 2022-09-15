@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function onlyPlayOneIn(container) {
+  container.addEventListener("play", function(event) {
+  audio_elements = container.getElementsByTagName("audio")
+    for(i=0; i < audio_elements.length; i++) {
+      audio_element = audio_elements[i];
+      if (audio_element !== event.target) {
+        audio_element.pause();
+      }
+    }
+  }, true);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  onlyPlayOneIn(document.body);
+});
+</script>
+<h1>Denoiser samples (current model architecture based on <a href="https://arxiv.org/abs/2203.12188">FullSubNet+</a>) </h1>
+<p>This webpage presents some results of the trained model on singing voice.</p>
+
+<h3>Stationary noise: air conditioning </h3>
+<table>
+    <tr>
+        <th scope="col">Orignal</th>
+        <th scope="col">SNR = 30 dB</th>
+        <th scope="col">SNR = 20 dB</th>
+        <th scope="col">SNR = 10 dB</th>
+
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_aircon_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_aircon_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_aircon_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+    <tr>
+        <th scope="row">Enhanced (original)</th>
+        <th>Enhanced (SNR = 30 dB)</th>
+        <th>Enhanced (SNR = 20 dB)</th>
+        <th>Enhanced (SNR = 10 dB)</th>
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_aircon_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_aircon_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_aircon_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+</table>
+
+
+<h3>Stationary noise: fridge </h3>
+<table>
+    <tr>
+        <th scope="col">Orignal</th>
+        <th scope="col">SNR = 30 dB</th>
+        <th scope="col">SNR = 20 dB</th>
+        <th scope="col">SNR = 10 dB</th>
+
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_fridge_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_fridge_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_fridge_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+    <tr>
+        <th scope="row">Enhanced (original)</th>
+        <th>Enhanced (SNR = 30 dB)</th>
+        <th>Enhanced (SNR = 20 dB)</th>
+        <th>Enhanced (SNR = 10 dB)</th>
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_fridge_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_fridge_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_fridge_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+</table>
+
+
+<h3>Non-stationary noise: cat </h3>
+<table>
+    <tr>
+        <th scope="col">Orignal</th>
+        <th scope="col">SNR = 30 dB</th>
+        <th scope="col">SNR = 20 dB</th>
+        <th scope="col">SNR = 10 dB</th>
+
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_cat_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_cat_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_cat_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+    <tr>
+        <th scope="row">Enhanced (original)</th>
+        <th>Enhanced (SNR = 30 dB)</th>
+        <th>Enhanced (SNR = 20 dB)</th>
+        <th>Enhanced (SNR = 10 dB)</th>
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_cat_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_cat_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_cat_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+</table>
+
+<h3>Non-stationary noise: traffic </h3>
+<table>
+    <tr>
+        <th scope="col">Orignal</th>
+        <th scope="col">SNR = 30 dB</th>
+        <th scope="col">SNR = 20 dB</th>
+        <th scope="col">SNR = 10 dB</th>
+
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_traffic_india_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_traffic_india_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/noisy_mix_normalized/Marvin_normalized_noise_traffic_india_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+    <tr>
+        <th scope="row">Enhanced (original)</th>
+        <th>Enhanced (SNR = 30 dB)</th>
+        <th>Enhanced (SNR = 20 dB)</th>
+        <th>Enhanced (SNR = 10 dB)</th>
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_traffic_india_normalized_snr30.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_traffic_india_normalized_snr20.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audioV2/enhanced_normalized/Marvin_normalized_noise_traffic_india_normalized_snr10.0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+</table>
+
+
+</body>
+</html>
+
