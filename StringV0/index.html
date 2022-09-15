@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <h1>Denoiser samples (current model architecture based on <a href="https://arxiv.org/abs/2203.12188">FullSubNet+</a>) </h1>
-<p>This webpage presents some results of the trained models on singing voice.</p>
-<p>Models 1 and 2 have the same architecture, the only difference being the Signal-to-Noise Ratio (SNR) range used for dynamic mixing of the training dataset.</p>
-<p>SNR range for model 1 = [-5,20] dB</p>
-<p>SNR range for model 2 = [10,40] dB</p>
+<p>This webpage presents some results of the trained models on instruments.</p>
+<p>Models 1 and 2 have the same architecture, the only difference being the training dataset.</p>
+<p>Training dataset for model 1: Voice dataset from <a href="https://github.com/microsoft/DNS-Challenge/blob/master/download-dns-challenge-4.sh">DNS challenge </a></p>
+<p>Training dataset for model 2: Instrument dataset named <a href="https://magenta.tensorflow.org/datasets/nsynth">NSynth </a></p>
 
 <h3>Stationary noise: air conditioning </h3>
 <table>
