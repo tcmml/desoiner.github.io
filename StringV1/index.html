@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <h1>Denoiser samples (current model architecture based on <a href="https://arxiv.org/abs/2203.12188">FullSubNet+</a>) </h1>
 <p>This webpage presents some results of the trained models on instruments.</p>
 <p>Models 1 and 2 have the same architecture, the only difference being the training dataset.</p>
-<p>Training dataset for model 1: Voice dataset from <a href="https://github.com/microsoft/DNS-Challenge/blob/master/download-dns-challenge-4.sh">DNS challenge </a></p>
-<p>Training dataset for model 2: Instrument dataset named <a href="https://magenta.tensorflow.org/datasets/nsynth">NSynth </a></p>
+<p>Training dataset for model 1: Instrument dataset named <a href="https://magenta.tensorflow.org/datasets/nsynth">NSynth </a></p>
+<p>Training dataset for model 2: Voice dataset from <a href="https://github.com/microsoft/DNS-Challenge/blob/master/download-dns-challenge-4.sh">DNS challenge </a></p>
+
 
 <h3>Stationary noise: air conditioning </h3>
 <table>
@@ -60,31 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
     <tr>
         <th scope="row">
         <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_327.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-        <th>
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_183.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-        <th>
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_277.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-    </tr>
-    <tr>
-        <th>Enhanced by model 2 (SNR = 30 dB)</th>
-        <th>Enhanced by model 2 (SNR = 20 dB)</th>
-        <th>Enhanced by model 2 (SNR = 10 dB)</th>
-    </tr>
-    <tr>
-        <th scope="row">
-        <audio controls>
           <source src="audio_test/fullsubnetplus_instrumentV1/clean_fileid_327.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
@@ -98,6 +74,31 @@ document.addEventListener("DOMContentLoaded", function() {
         <th>
         <audio controls>
           <source src="audio_test/fullsubnetplus_instrumentV1/clean_fileid_277.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+    </tr>
+    <tr>
+        <th>Enhanced by model 2 (SNR = 30 dB)</th>
+        <th>Enhanced by model 2 (SNR = 20 dB)</th>
+        <th>Enhanced by model 2 (SNR = 10 dB)</th>
+    </tr>
+    <tr>
+        <th scope="row">
+        <audio controls>
+          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_327.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_183.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        </th>
+        <th>
+        <audio controls>
+          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_277.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
         </th>
