@@ -20,9 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 <h1>Denoiser samples on acoustic guitare (current model architecture based on <a href="https://arxiv.org/abs/2203.12188">FullSubNet+</a>) </h1>
 <p>This webpage presents some results of the trained models on instruments.</p>
-<p>Models 1 and 2 have the same architecture, the only difference being the training dataset.</p>
+<p>Models 1 have the same architecture that the singing voice model, the only difference being the training dataset.</p>
 <p>Training dataset for model 1: Instrument dataset named <a href="https://magenta.tensorflow.org/datasets/nsynth">NSynth </a></p>
-<p>Training dataset for model 2: Voice dataset from <a href="https://github.com/microsoft/DNS-Challenge/blob/master/download-dns-challenge-4.sh">DNS challenge </a></p>
 
 
 <h3>Stationary noise: Air Conditioning </h3>
@@ -74,31 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
         <th>
         <audio controls>
           <source src="audio_test/fullsubnetplus_instrumentV1/clean_fileid_277.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-    </tr>
-    <tr>
-        <th>Enhanced by model 2 (SNR = 30 dB)</th>
-        <th>Enhanced by model 2 (SNR = 20 dB)</th>
-        <th>Enhanced by model 2 (SNR = 10 dB)</th>
-    </tr>
-    <tr>
-        <th scope="row">
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_327.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-        <th>
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_183.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-        <th>
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_277.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
         </th>
@@ -159,38 +133,10 @@ document.addEventListener("DOMContentLoaded", function() {
         </audio>
         </th>
     </tr>
-    <tr>
-        <th>Enhanced by model 2 (SNR = 30 dB)</th>
-        <th>Enhanced by model 2 (SNR = 20 dB)</th>
-        <th>Enhanced by model 2 (SNR = 10 dB)</th>
-    </tr>
-    <tr>
-        <th scope="row">
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_268.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-        <th>
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_332.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-        <th>
-        <audio controls>
-          <source src="audio_test/fullsubnetplus_highSNR/clean_fileid_13.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-        </th>
-    </tr>
 </table>
 
 <h3>Objective metrics </h3>
 <p>Model 1: {'SI_SDR': 12.128818338943852, 'STOI': 0.8586197683702115, 'MOSNET': 2.5115118, 'MSE_STFT': 2.636102, 'L1_STFT': 0.407844, 'SRMR': 5.197743202210995, 'SDR': 14.87310973890479, 'SNRseg': 7.685804790620643, 'LLR': 1.4082947957333396, 'WSS': 37.19487387268204, 'Cepstrum': 7.118736610742221}</p>
-
-<p>Model 2: {'SI_SDR': 11.183272955318293, 'STOI': 0.8401311305973631, 'MOSNET': 2.3386743, 'MSE_STFT': 2.7090268, 'L1_STFT': 0.44383758, 'SRMR': 4.345564366480959, 'SDR': 14.80232974427521, 'SNRseg': 7.394650068849543, 'LLR': 1.1806892664681408, 'WSS': 38.67644793958533, 'Cepstrum': 5.814903040277081}</p>
-
 
 </body>
 </html>
